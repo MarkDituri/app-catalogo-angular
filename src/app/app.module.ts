@@ -1,12 +1,13 @@
+import { AboutComponent } from './about/about.component';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { CatalogoComponent } from './pages/catalogo/catalogo.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { HeaderComponent } from './shared/header/header.component';
-import { NgModule } from '@angular/core';
-import { AboutComponent } from './about/about.component';
+import { HttpClientModule } from '@angular/common/http'
 import { ItemComponent } from './item/item.component';
+import { NgModule } from '@angular/core';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { ItemComponent } from './item/item.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
