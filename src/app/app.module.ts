@@ -8,6 +8,7 @@ import { HeaderComponent } from './shared/header/header.component';
 import { HttpClientModule } from '@angular/common/http'
 import { ItemComponent } from './pages/item/item.component';
 import { NgModule } from '@angular/core';
+import { SearchComponent } from './pages/search/search.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { NgModule } from '@angular/core';
     FooterComponent,
     CatalogoComponent,
     AboutComponent,
-    ItemComponent
+    ItemComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,

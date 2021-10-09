@@ -10,6 +10,7 @@ import { Producto } from '../interfaces/producto.interface';
 export class ProductosService {
   cargando = true;
   productos: any;
+  productosFiltrado: Producto[] = [];
 
   constructor( private http: HttpClient ) {
     this.cargarProductos();
@@ -21,5 +22,16 @@ export class ProductosService {
       this.cargando = false;
       this.productos = resp;
     });
+  }
+
+  getProductio(id: string){
+    return this.http.get(`https://angular-catalogo-98f71-default-rtdb.firebaseio.com/productos/${id}.json`);
+  }
+
+  buscarProdcuto( termino: string){
+    this.productosFiltrado = this.productos.filter( producto => {
+      return true;
+    });
+    console.log(this.productosFiltrado);
   }
 } // Fin ProductosService
