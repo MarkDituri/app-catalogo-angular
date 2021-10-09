@@ -13,5 +13,5 @@ export class CatalogoComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  
 }
